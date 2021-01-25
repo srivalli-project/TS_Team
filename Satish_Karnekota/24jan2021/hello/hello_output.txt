@@ -1,0 +1,9 @@
+input:
+
+Welcome to C programming.
+
+output:
+
+Hello, World!
+
+Welcome to C programming.
