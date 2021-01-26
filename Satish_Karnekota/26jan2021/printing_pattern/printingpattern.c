@@ -1,0 +1,72 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() 
+{
+
+    int n;
+    scanf("%d",&n);
+    int size=2*n-1;
+    int start=0;
+    int end = size-1;
+    int a[size][size];
+    while(n!=0)
+    {
+        for(int i=start;i<=end;i++)
+        {
+            for(int j=start;j<=end;j++)
+            {
+                if(i==start || i==end || j==start || j==end)
+                a[i][j]=n;
+            }
+        }
+        ++start;
+        --end;
+        --n;        
+    }
+     
+    for(int i=0;i<size;i++) 
+  	{
+        for(int j=0;j<size;j++)      
+            printf("%d",a[i][j]);
+            printf("\n");
+          
+    }
+    
+    
+    return 0;
+}
+
+
+
+/*
+
+results:
+
+
+input : 2 
+
+output:
+
+2 2 2
+2 1 2 
+2 2 2 
+
+input: 5
+
+output:
+
+555555555
+544444445
+543333345
+543222345
+543212345
+543222345
+543333345
+544444445
+555555555
+
+*/
+
